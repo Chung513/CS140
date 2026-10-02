@@ -1,0 +1,20 @@
+main p{
+    color: orange;
+}
+
+header h1{
+    color: indigo;
+}
+
+#maintitle{
+    color: violet;
+}
+
+.red {
+    color: red;
+}
+
+.bigger {
+    font-size: 15pt;
+    font-weight: bold;
+}
