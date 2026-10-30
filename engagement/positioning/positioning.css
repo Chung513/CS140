@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.seasidfig {
+    border: 2px solid black;
+    width: 250px;
+    overflow: hidden;
+}
+
+#floatfig {
+    float: right;
+}
+
+#relative {
+    position: relative;
+    top: -10px;
+    left: 20px;
+}
+
+#absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#fixed {
+    position: fixed;
+    top: 0;
+    right: 150;
+}
+
+.seasidfig img {
+    width: 100%;
+}
+
+.enforcer {
+    clear: both;
+}
