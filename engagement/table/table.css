@@ -1,0 +1,29 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#schedule {
+    border: 1px solid #000;
+    border-collapse: separate;
+}
+
+#schedule th, td {
+    border: 1px solid #000;
+}
+
+#schedule tbody th, #schedule thead th {
+  background-color: navy;
+  color: white;
+}
+
+
+#schedule tbody tr:nth-child(even) {
+    background-color: rgb(162, 230, 247)
+}
+#schedule tbody tr:nth-child(odd) {
+    background-color: rgb(162, 178, 247)
+}
+
+#schedule tbody tr td:last-child {
+    text-align: right;
+}
