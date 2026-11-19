@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    </head>
+<body>
+    <header>
+        <h1>Chung's Web Design</h1>
+    </header>
+    <main>
+        <div id="message"></div>
+        <form action="processing.html" method="post" id="myForm">
+            <div>First Name: <input type="text" id="firstName" name="first" placeholder="First Name"></div>
+            <div>Last Name: <input type="text" id="lastName" name="last" placeholder="Last Name"></div>
+            <div>Password: <input type="password" name="pass" id="password"></div>
+            <div><input type="checkbox" name="remember" checked id="remember"> Remember Me</div>
+            <div>Age: <input type="number" name="age" id="age"></div>
+            <div class="form-row">
+                    <label for="bdate">Birthdate</label>
+                    <input type="date" name="bdate" id="bdate">
+            </div>
+            <div>Class:
+                <input type="radio" value="freshman">Freshman
+                <input type="radio" value="sophomore">Sophomore
+                <input type="radio" value="junior">Junior
+                <input type="radio" value="senior">Senior
+            </div>
+            <div>State: <select name="state" id="state">
+                <option value="none" disabled selected>Make Selection</option>
+                <option value="hi">Hawaii</option>
+                <option value="ca">California</option>
+                <option value="co">Colorado</option>
+                <option value="ut">Utah</option>
+                <option value="ny">New York</option>
+            </select></div>
+            <div><input type="submit"></div>
+        </form>
+        <!-- 1. AJAX is Asynchronous JavaScript and XML to send and recive data from a server
+        2. Yes
+        3.Check the red erroe message, line number will appear on the right
+        4.Yes -->
+    </main>
+    <footer>
+        <p>&copy; 2026 Kin Chung Ng</p>
+    </footer>
+        <script src="form.js"></script>
+</body>
+</html>
