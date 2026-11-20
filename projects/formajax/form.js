@@ -4,6 +4,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
             const first = document.getElementById("firstName").value;
             const last = document.getElementById("lastName").value;
             const age = document.getElementById("age").value;
+            const birthdate = document.getElementById("birthdate").value;
 
             if (!first || !last) {
                 alert("Please provide your full name.");
@@ -19,21 +20,31 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
                 firstName: first,
                 lastName: last,
                 age: age
+                password: document.getElementById("password").value,
+                remember: document.getElementById("remember").checked,
+                state: document.getElementById("state").value,
+                birthdate: birthdate,
             };
 
+            console.log(formData);
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "submit.json", true);
+            xhr.open("GET", "submit.json", true);
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
+                    //alert('form submitted successfully.');
+                    const message = document.getElementById("message");
                     const response = JSON.parse(xhr.responseText);
-                    document.getElementById("message").innerHTML = response.message;
-                    document.getElementById("myForm").innerHTML = "";
+                    message.textContent = response.message;
+                    const form = document.getElementById("myForm");
+                    form.rest();
+                    // document.getElementById("message").innerHTML = response.message;
+                    // document.getElementById("myForm").innerHTML = "";
                 } else if (xhr.readyState === 4) {
                     alert("Error submitting form.");
                 }
             };
             xhr.send(JSON.stringify(data));
-
-            console.log(data);
+            alert("Success: ${fist} ${last}");
+            // console.log(data);
         });
