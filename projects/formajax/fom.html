@@ -13,21 +13,20 @@
     <main>
         <div id="message"></div>
         <form action="processing.html" method="post" id="myForm">
-            <div>First Name: <input type="text" id="firstName" name="first" placeholder="First Name"></div>
-            <div>Last Name: <input type="text" id="lastName" name="last" placeholder="Last Name"></div>
-            <div>Password: <input type="password" id="password" name="pass"></div>
+            <div>First Name: <input type="text" id="firstName" name="firstName" placeholder="First Name"></div>
+            <div>Last Name: <input type="text" id="lastName" name="lastName" placeholder="Last Name"></div>
+            <div>Password: <input type="password" id="password" name="password"></div>
             <div><input type="checkbox" name="remember" checked id="remember"> Remember Me</div>
             <div>Age: <input type="number" name="age" id="age"></div>
-            <div class="form-row">
-                    <label for="bdate">Birthdate</label>
-                    <input type="date" name="bdate" id="bdate">
-            </div>
+            <div>Birthdate: <input type="date" name="birthdate" id="birthdate"></div>
+
             <div>Class:
-                <input type="radio" value="freshman">Freshman
-                <input type="radio" value="sophomore">Sophomore
-                <input type="radio" value="junior">Junior
-                <input type="radio" value="senior">Senior
+                <input type="radio" name="class" value="freshman">Freshman
+                <input type="radio" name="class" value="sophomore">Sophomore
+                <input type="radio" name="class" value="junior">Junior
+                <input type="radio" name="class" value="senior">Senior
             </div>
+
             <div>State: <select name="state" id="state">
                 <option value="none" disabled selected>Make Selection</option>
                 <option value="hi">Hawaii</option>
@@ -36,6 +35,7 @@
                 <option value="ut">Utah</option>
                 <option value="ny">New York</option>
             </select></div>
+
             <div><input type="submit"></div>
         </form>
     </main>
